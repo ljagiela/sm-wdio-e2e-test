@@ -21,18 +21,18 @@ yarn
 ## Running the tests
 
 #### all tests
-when providing an URL for baseUrl param please note that there should be no extra chars like `/`
+When providing an URL for baseUrl param please note that there should be no extra chars at the end like `/`
 ```
 yarn test --baseUrl=http://testedwebsite.com
 ```
 
-#### specific spec 
+#### specific test file 
 ```
 yarn test --baseUrl=http://your-tested-website.com --spec=prizesList.spec.js
 ```
 
 ### Reporting
-project uses allure reporter for reporting, run:
+To generate allure reports run:
 ```
 yarn allure
 ```

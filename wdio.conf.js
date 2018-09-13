@@ -140,7 +140,7 @@ exports.config = {
     // See the full list at http://mochajs.org/
     mochaOpts: {
         ui: 'bdd',
-        timeout: 10000
+        timeout: 120000
     }
     //
     // Options to be passed to Jasmine.
