@@ -1,12 +1,12 @@
 const { expect } = require('chai');
 const BetContainer = require('../page-object/BetContainer.page');
 
-describe('Bet Conainer', () => {
+describe('Bet Container', () => {
     beforeEach(() => {
         browser.url('/');
     });
 
-    it('should be dispayed', () => {
+    it('should be displayed', () => {
         expect(BetContainer.betContainer.isVisible()).to.be.true;
     });
 

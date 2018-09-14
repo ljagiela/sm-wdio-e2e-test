@@ -21,9 +21,7 @@ describe('E2E', () => {
 
     function repeatSpinTest(index) {
         it(`should update all relevant fields after spin (#${index})`, () => {
-            for (let i = 0; i <= Math.floor(Math.random() * 10); i++) {
-                BetContainer.clickBetSpinUpButton();
-            }
+            for (let i = 0; i <= Math.floor(Math.random() * 10); i++) BetContainer.clickBetSpinUpButton();
 
             const initialBetValue = BetContainer.getBetValue();
             const initialCreditsValue = BetContainer.getCreditsValue();

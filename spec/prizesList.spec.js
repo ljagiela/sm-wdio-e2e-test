@@ -1,12 +1,12 @@
 const { expect } = require('chai');
 const PrizesListContainer = require('../page-object/PrizesListContainer.page');
 
-describe('Prizes List Conainer', () => {
+describe('Prizes List Container', () => {
     before(() => {
         browser.url('/');
     });
 
-    it('should be dispayed', () => {
+    it('should be displayed', () => {
         expect(PrizesListContainer.prizesListSlotMachineContainer.isVisible()).to.be.true;
     });
 

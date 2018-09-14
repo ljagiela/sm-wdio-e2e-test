@@ -28,28 +28,28 @@ class SlotMachineContainer {
     }
 
     waitUntilSpinDone() {
-        let previousReelValues = [];
+        let tempReelValues = [];
         let actualReelValues = this.getReelValues();
 
-        while (JSON.stringify(previousReelValues) !== JSON.stringify(actualReelValues)) {
-            previousReelValues = actualReelValues;
+        while (JSON.stringify(tempReelValues) !== JSON.stringify(actualReelValues)) {
+            tempReelValues = actualReelValues;
             browser.pause(250);
             actualReelValues = this.getReelValues();
         }
     }
 
-    getBannerUrl(containerSelector) {
+    getBannerBgUrl(containerSelector) {
         const bg = browser.$(containerSelector).getCssProperty('background').value;
         return bg.match(new RegExp(/"(.*)"/))[1];
     }
 
     isBannerNormalDisplayed() {
-        const url = this.getBannerUrl(slotMachineOuterContainerSelector);
+        const url = this.getBannerBgUrl(slotMachineOuterContainerSelector);
         return url === BANNER_NORMAL_BG;
     }
 
     isBannerWonDisplayed() {
-        const url = this.getBannerUrl(slotMachineInnerContainerSelector);
+        const url = this.getBannerBgUrl(slotMachineInnerContainerSelector);
         return url === BANNER_WON_BG;
     }
 }

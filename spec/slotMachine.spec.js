@@ -1,12 +1,12 @@
 const { expect } = require('chai');
 const SlotMachineContainer = require('../page-object/SlotMachineContainer.page');
 
-describe('Slot Machine Conainer', () => {
+describe('Slot Machine Container', () => {
     before(() => {
         browser.url('/');
     });
 
-    it('should be dispayed', () => {
+    it('should be displayed', () => {
         expect(SlotMachineContainer.slotMachineOuterConainer.isVisible()).to.be.true;
     });
 

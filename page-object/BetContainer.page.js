@@ -45,10 +45,6 @@ class BetContainer {
         this.spinButton.click();
     }
 
-    waitForSpinButtonActive() {
-        this.spinButtonDisabled.waitForExist(10000, true);
-    }
-
     clickBetSpinUpButton() {
         this.betSpinUpButton.click();
     }
